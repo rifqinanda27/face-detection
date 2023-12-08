@@ -14,7 +14,7 @@ def detect_objects(image_path):
 
     blob = cv2.dnn.blobFromImage(image, 1/255.0, (416, 416), swapRB=True, crop=False)
     net.setInput(blob)
-
+    
     detections = net.forward(layer_names)
 
     boxes = []
